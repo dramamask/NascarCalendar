@@ -3,8 +3,12 @@ using NascarCalendar.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Bootstrap
 builder.Services.AddBlazorBootstrap();
+
+// Add my services
 builder.Services.AddSingleton<INascarService, ServerNascarService>();
+builder.Services.AddHttpClient<ServerNascarService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
