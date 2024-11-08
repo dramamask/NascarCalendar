@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using NascarCalendar.Services
+@using NascarCalendar.Models
 @inject INascarService NascarService
 @attribute [StreamRendering]
 
@@ -7,15 +8,34 @@
 
 <h1>Calendar</h1>
 
-<p>@calendar</p>
+@if (races == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var race in races)
+    {
+        <p>@calendar</p>
+    }
+}
 
 @code {
     private string calendar = "c";
+    private List<Race> races = null;
 
     protected override async Task OnInitializedAsync()
     {
         try {
-          calendar = await NascarService.GetCalendar();
+            var calendarRoot = await NascarService.GetCalendar();
+
+            calendar = calendarRoot.series_1[1].race_name;
+            races = calendarRoot.series_1;
+
+
+
+
+
         } catch (Exception e) {
             calendar = "Error retrieving Calendar. Please try again later.";
             // TODO: Display the error in the UI in a proper error format

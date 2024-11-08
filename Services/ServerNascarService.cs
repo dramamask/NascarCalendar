@@ -1,10 +1,11 @@
+using NascarCalendar.Models;
 using System.Net.Http.Json;
 
 namespace NascarCalendar.Services;
 
 public class ServerNascarService(HttpClient http) : INascarService
 {
-    public async Task<string> GetCalendar()
+    public async Task<Calendar> GetCalendar()
     {
         HttpResponseMessage res = await http.GetAsync("https://cf.nascar.com/cacher/2023/race_list_basic.json");
 
@@ -15,6 +16,6 @@ public class ServerNascarService(HttpClient http) : INascarService
             throw new Exception(msg);
         }
 
-        return await res.Content.ReadAsStringAsync();
+        return await res.Content.ReadFromJsonAsync<Calendar>();
     }
 }

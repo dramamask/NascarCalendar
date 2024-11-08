@@ -1,6 +1,8 @@
+using NascarCalendar.Models;
+
 namespace NascarCalendar.Services;
 
 public interface INascarService
 {
-    public Task<string> GetCalendar();
+    public Task<Calendar> GetCalendar();
 }
