@@ -14,6 +14,11 @@
 
     protected override async Task OnInitializedAsync()
     {
-        calendar = await NascarService.GetCalendar();
+        try {
+          calendar = await NascarService.GetCalendar();
+        } catch (Exception e) {
+            calendar = "Error retrieving Calendar. Please try again later.";
+            // TODO: Display the error in the UI in a proper error format
+        }
     }
 }
