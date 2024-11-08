@@ -2,6 +2,6 @@ namespace NascarCalendar.Services;
 
 public interface INascarService
 {
-    public string GetCalendar();
+    public Task<string> GetCalendar();
     public string GetCalendarSync();
 }

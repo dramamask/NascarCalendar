@@ -14,6 +14,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        calendar = NascarService.GetCalendar();
+        calendar = await NascarService.GetCalendar();
     }
 }
