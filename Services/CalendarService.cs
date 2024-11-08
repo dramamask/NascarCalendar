@@ -29,7 +29,22 @@ public class CalendarService(HttpClient http) : ICalendarService
         return calendar;
     }
 
-    public Race GetRace(string seriesName, int raceIndex) {
+    public List<Race> GetSeries(string seriesName)
+    {
+        switch (seriesName) {
+            case "series_1":
+                return calendar.series_1;
+            case "series_2":
+                return calendar.series_2;
+            case "series_3":
+                return calendar.series_3;
+            default:
+                return null;
+        }
+    }
+
+    public Race GetRace(string seriesName, int raceIndex)
+    {
         switch (seriesName) {
             case "series_1":
                 return calendar.series_1[raceIndex];

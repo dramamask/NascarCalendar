@@ -38,11 +38,10 @@ else
         try {
             var calendarRoot = await CalendarService.GetCalendar();
 
-            calendar = calendarRoot.series_1[1].race_name;
-            races = calendarRoot.series_1;
+            races = CalendarService.GetSeries("series_1");
 
         } catch (Exception e) {
-            calendar = "Error retrieving Calendar. Please try again later.";
+            var err = "Error retrieving Calendar. Please try again later.";
             // TODO: Display the error in the UI in a proper error format
         }
     }
