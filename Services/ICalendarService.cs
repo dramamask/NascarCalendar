@@ -4,7 +4,7 @@ namespace NascarCalendar.Services;
 
 public interface ICalendarService
 {
-    public Task<Calendar> GetCalendar();
+    public Task<Calendar> GetCalendar(string year);
 
     public List<Race> GetSeries(string seriesName);
 

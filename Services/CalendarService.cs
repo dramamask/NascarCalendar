@@ -8,9 +8,9 @@ public class CalendarService(HttpClient http) : ICalendarService
 {
     private Calendar calendar = null;
 
-    public async Task<Calendar> GetCalendar()
+    public async Task<Calendar> GetCalendar(string year)
     {
-        HttpResponseMessage res = await http.GetAsync("https://cf.nascar.com/cacher/2023/race_list_basic.json");
+        HttpResponseMessage res = await http.GetAsync("https://cf.nascar.com/cacher/" + year + "/race_list_basic.json");
 
         if (!res.IsSuccessStatusCode)
         {

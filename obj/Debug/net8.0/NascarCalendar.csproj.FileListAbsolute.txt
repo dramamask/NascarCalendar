@@ -42,3 +42,4 @@
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/NascarCalendar.sourcelink.json
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/Race.razor.rz.scp.css
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/SeriesPicker.razor.rz.scp.css
+/home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/ErrorMessage.razor.rz.scp.css

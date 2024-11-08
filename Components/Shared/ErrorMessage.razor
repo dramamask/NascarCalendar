@@ -1,0 +1,13 @@
+<div Class="alert alert-danger">
+    <div>
+        The follolwing error occured while attempting to download the NASCAR schedule:
+    </div>
+    <div Class="message">
+        @Message
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Message { get; set; }
+}

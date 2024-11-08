@@ -1,9 +1,9 @@
-<CardGroup Class="mb-2 border-0" Style="width:100%;">
+<CardGroup Class="mb-2 border-0 main-container">
     <div Class="series-name" Style="width:70%;">
         @publicSeriesName
     </div>
-    <div Class="cup series @(SeriesName != "series_1" ? "blur-pic" : "")" Style="width:10%;">
-        <a href="/series/series_1">
+    <div Class="cup series @(SeriesName != "series_1" ? "blur-pic" : "")">
+        <a href="/series_1/@Year">
             <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_cup_series_logo.svg"/>
         </a>
         @if (SeriesName == "series_1")
@@ -11,8 +11,8 @@
             <div Class="line mt-1" />
         }
     </div>
-    <div Class="xfinity series @(SeriesName != "series_2" ? "blur-pic" : "")" Style="width:10%;">
-        <a href="/series/series_2">
+    <div Class="xfinity series @(SeriesName != "series_2" ? "blur-pic" : "")">
+        <a href="/series_2/@Year">
             <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_xfinity_series_logos-1.svg"/>
         </a>
         @if (SeriesName == "series_2")
@@ -20,9 +20,9 @@
             <div Class="line mt-1" />
         }
     </div>
-    <div Class="truck series @(SeriesName != "series_3" ? "blur-pic" : "")" Style="width:10%;">
-        <a href="/series/series_3">
-            <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_craftsman_truck_series_logo.svg"/>
+    <div Class="truck series @(SeriesName != "series_3" ? "blur-pic" : "")">
+        <a href="/series_3/@Year">
+            <img src="@truckImgUrl"/>
         </a>
         @if (SeriesName == "series_3")
         {
@@ -34,10 +34,14 @@
 <div Class="line"/>
 
 @code {
-    private string publicSeriesName = "";
-
     [Parameter, EditorRequired]
     public string SeriesName { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public string Year { get; set; } = "";
+
+    private string publicSeriesName = "";
+    private string truckImgUrl = "https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_craftsman_truck_series_logo.svg";
 
     protected override void OnInitialized()
     {
@@ -55,6 +59,10 @@
             default:
                 publicSeriesName = "";
                 break;
+        }
+
+        if (Int32.Parse(Year) <= 2022) {
+            truckImgUrl = "https://latino.nascar.com/wp-content/uploads/sites/8/2022/05/19/NCWTS-Primary-RGB_240x115.png";
         }
     }
 }

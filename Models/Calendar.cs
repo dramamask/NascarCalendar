@@ -63,7 +63,9 @@ namespace NascarCalendar.Models;
         public int qualifying_race_no { get; set; }
         public int qualifying_race_id { get; set; }
         public bool has_qualifying { get; set; }
-        public int winner_driver_id { get; set; }
+
+        // TODO: Make this work with null values. JsonIgnoreCondition configuration doesn't seem to work.
+        //public int winner_driver_id { get; set; }
         public object pole_winner_laptime { get; set; }
     }
 

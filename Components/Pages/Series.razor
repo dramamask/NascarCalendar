@@ -1,4 +1,4 @@
-﻿@page "/series/{SeriesName}"
+﻿@page "/{SeriesName}/{Year}"
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
@@ -8,7 +8,14 @@
 
 <PageTitle>Series</PageTitle>
 
-<SeriesPicker SeriesName=@SeriesName/>
+<h1>NASCAR Schedule @Year</h1>
+
+<SeriesPicker SeriesName=@SeriesName Year="@Year"/>
+
+@if (error != "")
+{
+    <ErrorMessage Message=@error/>
+}
 
 @if (races == null)
 {
@@ -24,23 +31,25 @@ else
     </div>
 }
 
+
 @code {
     [Parameter, EditorRequired]
-    public string SeriesName { get; set; } = "";
+    public string SeriesName { get; set; }
 
-    private string calendar = "c";
+    [Parameter, EditorRequired]
+    public string Year { get; set; }
+
+    private string error = "";
     private List<Models.Race> races = null;
 
     protected override async Task OnInitializedAsync()
     {
         try {
-            var calendarRoot = await CalendarService.GetCalendar();
+            await CalendarService.GetCalendar(Year);
 
             races = CalendarService.GetSeries(SeriesName);
-
         } catch (Exception e) {
-            var err = "Error retrieving Calendar. Please try again later.";
-            // TODO: Display the error in the UI in a proper error format
+            var error = e.Message;
         }
     }
 }
