@@ -1,8 +1,10 @@
 ﻿@page "/"
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
+@using NascarCalendar.Components.Shared
 @inject INascarService NascarService
 @attribute [StreamRendering]
+@rendermode InteractiveServer
 
 <PageTitle>Home</PageTitle>
 
