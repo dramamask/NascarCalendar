@@ -1,6 +1,6 @@
 ﻿@page "/"
 @using NascarCalendar.Services
-@using NascarCalendar.Models
+@using Models = NascarCalendar.Models
 @inject INascarService NascarService
 @attribute [StreamRendering]
 
@@ -16,13 +16,13 @@ else
 {
     @foreach (var race in races)
     {
-        <p>@calendar</p>
+        <Race RaceName=@race.race_name />
     }
 }
 
 @code {
     private string calendar = "c";
-    private List<Race> races = null;
+    private List<Models.Race> races = null;
 
     protected override async Task OnInitializedAsync()
     {
@@ -31,10 +31,6 @@ else
 
             calendar = calendarRoot.series_1[1].race_name;
             races = calendarRoot.series_1;
-
-
-
-
 
         } catch (Exception e) {
             calendar = "Error retrieving Calendar. Please try again later.";

@@ -1,8 +1,10 @@
+@page "/race"
+
+@using Models = NascarCalendar.Models
+
 <p>@RaceName</p>
 
 @code {
     [Parameter]
     public string RaceName { get; set; } = "";
-
-
 }
