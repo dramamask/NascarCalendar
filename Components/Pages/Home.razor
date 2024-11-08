@@ -1,0 +1,19 @@
+﻿@page "/"
+@using NascarCalendar.Services
+@inject INascarService NascarService
+@attribute [StreamRendering]
+
+<PageTitle>Home</PageTitle>
+
+<h1>Calendar</h1>
+
+<p>@calendar</p>
+
+@code {
+    private string calendar = "c";
+
+    protected override async Task OnInitializedAsync()
+    {
+        calendar = NascarService.GetCalendar();
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/projectbundle/NascarCalendar.bundle.scp.css",
+      "PackagePath": "staticwebassets/NascarCalendar.bundle.scp.css"
+    },
+    {
+      "Id": "/home/mark/dev/NascarCalendar/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/home/mark/dev/NascarCalendar/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.NascarCalendar.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.NascarCalendar.props",
+      "PackagePath": "build\\NascarCalendar.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.NascarCalendar.props",
+      "PackagePath": "buildMultiTargeting\\NascarCalendar.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.NascarCalendar.props",
+      "PackagePath": "buildTransitive\\NascarCalendar.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
