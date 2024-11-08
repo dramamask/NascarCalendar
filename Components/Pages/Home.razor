@@ -10,36 +10,5 @@
 
 <h1>NASCAR Schedule 2023</h1>
 
-<SeriesPicker/>
+<Series SeriesName="series_1"/>
 
-@if (races == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <div>
-    @foreach (var race in races.Select((value, index) => new { index, value }))
-    {
-        <Race Series="series_1" RaceIndex=@race.index/>
-    }
-    </div>
-}
-
-@code {
-    private string calendar = "c";
-    private List<Models.Race> races = null;
-
-    protected override async Task OnInitializedAsync()
-    {
-        try {
-            var calendarRoot = await CalendarService.GetCalendar();
-
-            races = CalendarService.GetSeries("series_1");
-
-        } catch (Exception e) {
-            var err = "Error retrieving Calendar. Please try again later.";
-            // TODO: Display the error in the UI in a proper error format
-        }
-    }
-}

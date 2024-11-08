@@ -1,4 +1,4 @@
-﻿@page "/series"
+﻿@page "/series/{SeriesName}"
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
@@ -8,20 +8,18 @@
 
 <PageTitle>Series</PageTitle>
 
-<h1>NASCAR Schedule 2023</h1>
-
-<SeriesPicker/>
+<SeriesPicker SeriesName=@SeriesName/>
 
 @if (races == null)
 {
-    <p><em>Loading...</em></p>
+    <p></p>
 }
 else
 {
     <div>
     @foreach (var race in races.Select((value, index) => new { index, value }))
     {
-        <Race Series="series_1" RaceIndex=@race.index/>
+        <Race Series="@SeriesName" RaceIndex=@race.index/>
     }
     </div>
 }
@@ -38,7 +36,7 @@ else
         try {
             var calendarRoot = await CalendarService.GetCalendar();
 
-            races = CalendarService.GetSeries("series_1");
+            races = CalendarService.GetSeries(SeriesName);
 
         } catch (Exception e) {
             var err = "Error retrieving Calendar. Please try again later.";

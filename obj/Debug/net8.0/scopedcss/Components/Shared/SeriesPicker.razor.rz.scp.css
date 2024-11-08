@@ -1,8 +1,13 @@
-.seriesName[b-6myoym1tfp] {
+.series-name[b-6myoym1tfp] {
     top: 30%;
     font-weight: 800;
     font-size: 1.1em;
 }
+
+.blur-pic[b-6myoym1tfp] {
+    opacity: .2;
+}
+
 .series[b-6myoym1tfp] {
     padding-left: 10px;
 }

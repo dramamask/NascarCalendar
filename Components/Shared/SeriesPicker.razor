@@ -1,16 +1,60 @@
 <CardGroup Class="mb-2 border-0" Style="width:100%;">
-    <div Class="seriesName" Style="width:70%;">
-        NASCAR Cup Series
+    <div Class="series-name" Style="width:70%;">
+        @publicSeriesName
     </div>
-    <div Class="cup series" Style="width:10%;">
-        <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_cup_series_logo.svg"/>
+    <div Class="cup series @(SeriesName != "series_1" ? "blur-pic" : "")" Style="width:10%;">
+        <a href="/series/series_1">
+            <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_cup_series_logo.svg"/>
+        </a>
+        @if (SeriesName == "series_1")
+        {
+            <div Class="line mt-1" />
+        }
     </div>
-    <div Class="xfinity series" Style="width:10%;">
-        <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_xfinity_series_logos-1.svg"/>
+    <div Class="xfinity series @(SeriesName != "series_2" ? "blur-pic" : "")" Style="width:10%;">
+        <a href="/series/series_2">
+            <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_xfinity_series_logos-1.svg"/>
+        </a>
+        @if (SeriesName == "series_2")
+        {
+            <div Class="line mt-1" />
+        }
     </div>
-    <div Class="truck series" Style="width:10%;">
-        <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_craftsman_truck_series_logo.svg"/>
+    <div Class="truck series @(SeriesName != "series_3" ? "blur-pic" : "")" Style="width:10%;">
+        <a href="/series/series_3">
+            <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_craftsman_truck_series_logo.svg"/>
+        </a>
+        @if (SeriesName == "series_3")
+        {
+            <div Class="line mt-1" />
+        }
     </div>
 </CardGroup>
 
 <div Class="line"/>
+
+@code {
+    private string publicSeriesName = "";
+
+    [Parameter, EditorRequired]
+    public string SeriesName { get; set; } = "";
+
+    protected override void OnInitialized()
+    {
+        switch (SeriesName)
+        {
+            case "series_1":
+                publicSeriesName = "NASCAR Cup Series";
+                break;
+            case "series_2":
+                publicSeriesName = "NASCAR Xfinity Series";
+                break;
+            case "series_3":
+                publicSeriesName = "NASCAR CRAFTSMAN Truck Series";
+                break;
+            default:
+                publicSeriesName = "";
+                break;
+        }
+    }
+}
