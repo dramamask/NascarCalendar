@@ -1,8 +1,26 @@
-@using Models = NascarCalendar.Models
+@using NascarCalendar.Services
+@inject ICalendarService CalendarService
 
-<p>@RaceName</p>
+<p>@raceName at @trackName</p>
 
 @code {
-    [Parameter]
+    private string raceName = "-";
+    private string trackName = "-";
+
+    protected override void OnInitialized()
+    {
+        var race = CalendarService.GetRace(Series, RaceIndex);
+        raceName = race.race_name;
+        trackName = race.track_name;
+        return;
+    }
+
+    [Parameter, EditorRequired]
     public string RaceName { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public string Series { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public int RaceIndex { get; set; } = 0;
 }

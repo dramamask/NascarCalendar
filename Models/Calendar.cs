@@ -1,4 +1,6 @@
-    namespace NascarCalendar.Models;
+using Microsoft.AspNetCore.SignalR;
+
+namespace NascarCalendar.Models;
 
     public class Calendar
     {

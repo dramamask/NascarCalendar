@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddBlazorBootstrap();
 
 // Add my services
-builder.Services.AddSingleton<INascarService, ServerNascarService>();
-builder.Services.AddHttpClient<ServerNascarService>();
+builder.Services.AddSingleton<ICalendarService, CalendarService>();
+builder.Services.AddHttpClient<CalendarService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

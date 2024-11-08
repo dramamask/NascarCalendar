@@ -2,7 +2,7 @@
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
-@inject INascarService NascarService
+@inject ICalendarService CalendarService
 @attribute [StreamRendering]
 @rendermode InteractiveServer
 
@@ -16,9 +16,9 @@
 }
 else
 {
-    @foreach (var race in races)
+    @foreach (var race in races.Select((value, index) => new { index, value }))
     {
-        <Race RaceName=@race.race_name />
+        <Race Series="series_1" RaceIndex=@race.index/>
     }
 }
 
@@ -29,7 +29,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         try {
-            var calendarRoot = await NascarService.GetCalendar();
+            var calendarRoot = await CalendarService.GetCalendar();
 
             calendar = calendarRoot.series_1[1].race_name;
             races = calendarRoot.series_1;
