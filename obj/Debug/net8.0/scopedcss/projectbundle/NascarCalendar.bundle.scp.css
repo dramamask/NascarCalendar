@@ -201,3 +201,68 @@ main[b-1kezf5iojd] {
         overflow-y: auto;
     }
 }
+/* _content/NascarCalendar/Components/Shared/Race.razor.rz.scp.css */
+.race-name[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+.track-name[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 0.9em;
+    text-transform: uppercase
+}
+
+.weekday[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase
+}
+
+.date[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1.3em;
+    text-transform: uppercase
+}
+
+.time[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase
+}
+
+.laps[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 0.7em;
+    text-transform: uppercase
+}
+
+.distance[b-oh86wjfrd3] {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 0.7em;
+    text-transform: uppercase
+}
+/* _content/NascarCalendar/Components/Shared/SeriesPicker.razor.rz.scp.css */
+.seriesName[b-6myoym1tfp] {
+    top: 30%;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+.series[b-6myoym1tfp] {
+    padding-left: 10px;
+}
+
+.line[b-6myoym1tfp] {
+    border: none;
+    height: 5px;
+    color: #3a81fc;
+    background-color: #3a81fc;
+    margin-bottom: 20px;
+}

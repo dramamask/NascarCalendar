@@ -34,16 +34,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/mark/dev/NascarCalendar/Components/Pages/Series.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TZXJpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/mark/dev/NascarCalendar/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/mark/dev/NascarCalendar/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/mark/dev/NascarCalendar/Components/Shared/Race.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvUmFjZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/mark/dev/NascarCalendar/Components/_Imports.razor]
@@ -57,3 +57,11 @@ build_metadata.AdditionalFiles.CssScope = b-1kezf5iojd
 [/home/mark/dev/NascarCalendar/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-lsnqdu85ao
+
+[/home/mark/dev/NascarCalendar/Components/Shared/Race.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvUmFjZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-oh86wjfrd3
+
+[/home/mark/dev/NascarCalendar/Components/Shared/SeriesPicker.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvU2VyaWVzUGlja2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-6myoym1tfp

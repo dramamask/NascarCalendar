@@ -40,3 +40,5 @@
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/NascarCalendar.csproj.AssemblyReference.cache
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/NascarCa.92E745CF.Up2Date
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/NascarCalendar.sourcelink.json
+/home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/Race.razor.rz.scp.css
+/home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/SeriesPicker.razor.rz.scp.css

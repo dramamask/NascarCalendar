@@ -1,17 +1,51 @@
 @using NascarCalendar.Services
 @inject ICalendarService CalendarService
 
-<p>@raceName at @trackName</p>
+<Card Class="mb-2 rounded-0 shadow-sm" Style="width:100%;">
+    <CardGroup Class="p-2">
+        <div Style="width:10%">
+            <p Class="weekday">@raceDayOfWeek</p>
+            <p Class="date">@raceDate</p>
+            <p Class="time">@raceTime ET</p>
+        </div>
+        <div Style="width:25%"
+            <p Class="race-name">@raceName</p>
+            <p Class="track-name">@trackName</p>
+        </div>
+        <div Style="width:30%">
+
+        </div>
+        <div Style="width:25%">
+            <p Class="laps">This is a @laps lap race</p>
+            <p Class="distance">With a total distance of @distance miles</p>
+        </div>
+        <div Style="width:10%">
+
+        </div>
+    </CardGroup>
+</Card>
 
 @code {
     private string raceName = "-";
     private string trackName = "-";
+    private string raceDayOfWeek = "";
+    private string raceDate = "";
+    private string raceTime = "";
+    private int laps = 0;
+    private double distance = 0;
 
     protected override void OnInitialized()
     {
         var race = CalendarService.GetRace(Series, RaceIndex);
+
         raceName = race.race_name;
         trackName = race.track_name;
+        laps = race.scheduled_laps;
+        distance = race.scheduled_distance;
+
+        raceDayOfWeek = race.race_date.DayOfWeek.ToString();
+        raceDate = race.race_date.ToString("MMM. d");
+        raceTime = race.race_date.ToString("h:mm tt");
         return;
     }
 

@@ -1,4 +1,5 @@
 using NascarCalendar.Models;
+using System.Net;
 using System.Net.Http.Json;
 
 namespace NascarCalendar.Services;
@@ -16,6 +17,11 @@ public class CalendarService(HttpClient http) : ICalendarService
             string msg = await res.Content.ReadAsStringAsync();
             // TODO: Log the error somewhere
             throw new Exception(msg);
+        }
+
+        if (res.StatusCode == HttpStatusCode.NoContent)
+        {
+            return default(Calendar);
         }
 
         calendar = await res.Content.ReadFromJsonAsync<Calendar>();

@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/series"
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
@@ -6,7 +6,7 @@
 @attribute [StreamRendering]
 @rendermode InteractiveServer
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Series</PageTitle>
 
 <h1>NASCAR Schedule 2023</h1>
 
@@ -27,6 +27,9 @@ else
 }
 
 @code {
+    [Parameter, EditorRequired]
+    public string SeriesName { get; set; } = "";
+
     private string calendar = "c";
     private List<Models.Race> races = null;
 

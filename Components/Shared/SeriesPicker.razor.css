@@ -1,0 +1,16 @@
+.seriesName {
+    top: 30%;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+.series {
+    padding-left: 10px;
+}
+
+.line {
+    border: none;
+    height: 5px;
+    color: #3a81fc;
+    background-color: #3a81fc;
+    margin-bottom: 20px;
+}

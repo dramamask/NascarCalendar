@@ -1,0 +1,47 @@
+.race-name {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+.track-name {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 0.9em;
+    text-transform: uppercase
+}
+
+.weekday {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase
+}
+
+.date {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1.3em;
+    text-transform: uppercase
+}
+
+.time {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase
+}
+
+.laps {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 0.7em;
+    text-transform: uppercase
+}
+
+.distance {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 0.7em;
+    text-transform: uppercase
+}
