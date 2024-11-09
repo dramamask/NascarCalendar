@@ -170,8 +170,17 @@ main[b-1kezf5iojd] {
     text-transform: uppercase
 }
 /* _content/NascarCalendar/Components/Shared/SeriesPicker.razor.rz.scp.css */
+.container[b-6myoym1tfp] {
+    display: flex;
+    justify-content: flex-end;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
 .series-name[b-6myoym1tfp] {
-    top: 30%;
     font-weight: 800;
     font-size: 1.1em;
     width: 70%;
@@ -187,12 +196,11 @@ main[b-1kezf5iojd] {
 
 .series[b-6myoym1tfp] {
     padding-left: 10px;
-    width: 10%;
 }
 
 .series a img[b-6myoym1tfp] {
     object-fit: contain;
-    width: 100%;
+    width: 140px;
 }
 
 .line[b-6myoym1tfp] {

@@ -1,5 +1,14 @@
+.container {
+    display: flex;
+    justify-content: flex-end;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
 .series-name {
-    top: 30%;
     font-weight: 800;
     font-size: 1.1em;
     width: 70%;
@@ -15,12 +24,11 @@
 
 .series {
     padding-left: 10px;
-    width: 10%;
 }
 
 .series a img {
     object-fit: contain;
-    width: 100%;
+    width: 140px;
 }
 
 .line {
