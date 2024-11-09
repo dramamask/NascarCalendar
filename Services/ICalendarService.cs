@@ -6,7 +6,7 @@ public interface ICalendarService
 {
     public Task<Calendar> GetCalendar(int year);
 
-    public List<Race> GetSeries(string seriesName);
+    public List<Race> GetSeries(string seriesIdentifier);
 
-    public Race GetRace(string seriesName, int raceIndex);
+    public Race GetRace(string seriesIdentifier, int raceIndex);
 }

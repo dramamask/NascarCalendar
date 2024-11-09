@@ -30,9 +30,9 @@ public class CalendarService(HttpClient http) : ICalendarService
         return calendar;
     }
 
-    public List<Race> GetSeries(string seriesName)
+    public List<Race> GetSeries(string seriesIdentifier)
     {
-        switch (seriesName) {
+        switch (seriesIdentifier) {
             case "series_1":
                 return calendar.series_1;
             case "series_2":
@@ -44,9 +44,9 @@ public class CalendarService(HttpClient http) : ICalendarService
         }
     }
 
-    public Race GetRace(string seriesName, int raceIndex)
+    public Race GetRace(string seriesIdentifier, int raceIndex)
     {
-        switch (seriesName) {
+        switch (seriesIdentifier) {
             case "series_1":
                 return calendar.series_1[raceIndex];
             case "series_2":

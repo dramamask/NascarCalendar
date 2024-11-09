@@ -24,6 +24,13 @@
 </Card>
 
 @code {
+    [Parameter, EditorRequired]
+    public string SeriesIdentifier { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public int RaceIndex { get; set; } = 0;
+
+    // The info that is displayed for each race
     private string raceName = "-";
     private string trackName = "-";
     private string raceDayOfWeek = "";
@@ -34,7 +41,7 @@
 
     protected override void OnInitialized()
     {
-        var race = CalendarService.GetRace(Series, RaceIndex);
+        var race = CalendarService.GetRace(SeriesIdentifier, RaceIndex);
 
         raceName = race.race_name;
         trackName = race.track_name;
@@ -47,9 +54,5 @@
         return;
     }
 
-    [Parameter, EditorRequired]
-    public string Series { get; set; } = "";
 
-    [Parameter, EditorRequired]
-    public int RaceIndex { get; set; } = 0;
 }

@@ -29,18 +29,20 @@
 
 @code {
     [Parameter, EditorRequired]
-    public string SeriesName { get; set; }
+    public string SeriesIdentifier { get; set; }
 
     [Parameter, EditorRequired]
     public int Year { get; set; }
 
     private string display = "none";
 
+    // Performs the actual navigation when one of the dropdown items is clicked.
     private void NavigateTo(string year)
     {
-        NavManager.NavigateTo("/" + SeriesName + "/" + year);
+        NavManager.NavigateTo("/" + SeriesIdentifier + "/" + year);
     }
 
+    // Helper funcion to show and hide the dropdown. Returns the display style for the dropdown box.
     private void ShowHide() {
         if (display == "none") {
             display = "block";

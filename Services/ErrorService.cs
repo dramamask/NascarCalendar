@@ -67,8 +67,8 @@ namespace NascarCalendar.Services
          */
         private static string GetURLErrorMessage()
         {
-            var error = "The proper URL format is `/{SeriesName}/{Year}`,";
-            error += " where {SeriesName} is 'series_1', 'series_2', or 'series_3',";
+            var error = "The proper URL format is `/{seriesIdentifier}/{Year}`,";
+            error += " where {seriesIdentifier} is 'series_1', 'series_2', or 'series_3',";
             error += " and {Year} is a 4-digit number between 2015 and 2024.";
 
             return error;

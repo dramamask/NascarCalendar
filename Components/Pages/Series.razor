@@ -2,7 +2,7 @@
  * This page displays the schedule for a specific series in a specific year.
  *@
 
-@page "/{SeriesName}/{Year:int}"
+@page "/{SeriesIdentifier}/{Year:int}"
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
@@ -16,9 +16,9 @@
 
 <h1>NASCAR Schedule @Year</h1>
 
-<SeriesPicker SeriesIdentifier=@SeriesName Year=@Year/>
+<SeriesPicker SeriesIdentifier=@SeriesIdentifier Year=@Year/>
 
-<YearPicker SeriesName=@SeriesName Year=@Year/>
+<YearPicker SeriesIdentifier=@SeriesIdentifier Year=@Year/>
 
 @if (error != "")
 {
@@ -37,14 +37,14 @@ else
     <div>
     @foreach (var race in races.Select((value, index) => new { index, value }))
     {
-        <Race Series="@SeriesName" RaceIndex=@race.index/>
+        <Race SeriesIdentifier="@SeriesIdentifier" RaceIndex=@race.index/>
     }
     </div>
 }
 
 @code {
     [Parameter, EditorRequired]
-    public string SeriesName { get; set; }
+    public string SeriesIdentifier { get; set; }
 
     [Parameter, EditorRequired]
     public int Year { get; set; }
@@ -55,11 +55,11 @@ else
     protected override async Task OnInitializedAsync()
     {
         try {
-            ErrorService.CheckPageURL(SeriesName, Year);
+            ErrorService.CheckPageURL(SeriesIdentifier, Year);
 
             await CalendarService.GetCalendar(Year);
 
-            races = CalendarService.GetSeries(SeriesName);
+            races = CalendarService.GetSeries(SeriesIdentifier);
         } catch (Exception e) {
             error = e.Message;
         }
@@ -69,7 +69,7 @@ else
     {
         if (error == "") {
             var title = "Schedule for the " + Year.ToString();
-            title += " " + SeriesService.GetSeriesName(SeriesName, Year);
+            title += " " + SeriesService.GetSeriesName(SeriesIdentifier, Year);
             return title;
         }
 

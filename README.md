@@ -44,7 +44,9 @@ Development can be done with any editor as long as the dotnet cli is present.
 `dotnet watch` starts the server and opens the web page in the browser.
 
 ## TODO
-change SeriesName to SeriesIdentifier in comp and page parameters.
+Fix all the warnings
+
+Create a docker container to run the application
 
 
 
