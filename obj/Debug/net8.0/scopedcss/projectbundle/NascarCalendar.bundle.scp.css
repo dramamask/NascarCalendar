@@ -95,6 +95,20 @@ main[b-1kezf5iojd] {
         right: 0.75rem;
         top: 0.5rem;
     }
+/* _content/NascarCalendar/Components/Pages/404.razor.rz.scp.css */
+.the-container[b-nx5xgoqoxx] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.the-container p[b-nx5xgoqoxx] {
+    font-size: 32px;
+    height: 32px;
+    padding-left: 10px;
+}
 /* _content/NascarCalendar/Components/Shared/ErrorMessage.razor.rz.scp.css */
 .message[b-w8oqh4ih1w] {
     font-family: monospace;

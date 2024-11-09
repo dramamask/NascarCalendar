@@ -34,3 +34,16 @@ Development can be done with any editor as long as the dotnet cli is present.
 
 `dotnet watch` starts the server and opens the web page in the browser.
 
+## TODO
+Get 404 page to work.
+
+Spinner.
+
+Create a series service that converts series name ot proper series name.
+
+Better page titles.
+
+
+
+
+
