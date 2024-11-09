@@ -26,7 +26,6 @@
 
 .dropdown {
     border: 1px solid #000000;
-    margin-top: 34px;
     position: absolute;
     z-index: 1000;
 }
