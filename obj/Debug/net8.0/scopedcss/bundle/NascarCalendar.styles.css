@@ -207,12 +207,13 @@ main[b-1kezf5iojd] {
     width: 80%;
 }
 
-.text[b-q8w136na8j] {
+.season-text[b-q8w136na8j] {
     display:flex;
     justify-content: flex-end;
     font-weight: 800;
     font-size: 1.3em;
-    margin-top: 10px;
+    padding-top: 3px;
+    padding-right: 5px;
     text-transform: uppercase;
     width: 10%;
 }
@@ -221,15 +222,23 @@ main[b-1kezf5iojd] {
     width: 10%;
 }
 
-.the-dropdown[b-q8w136na8j] {
+.pick-button[b-q8w136na8j] {
+    background-color: #ffffff;
+    border: 1px solid #000000;
     font-weight: 800;
     font-size: 1.3em;
 }
 
-.dropdowns button[b-q8w136na8j] {
+.dropdown[b-q8w136na8j] {
+    border: 1px solid #000000;
+    position: absolute;
+    z-index: 1000;
+}
+.dropdown button[b-q8w136na8j] {
     background-color: #ffffff;
     border: none;
-    font-weight: 400;
+    display: block;
+    font-weight: 800;
     font-size: 1.3em;
     width: 100%;
 }
