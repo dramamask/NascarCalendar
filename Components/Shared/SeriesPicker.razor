@@ -62,8 +62,12 @@
                 break;
         }
 
-        if (Int32.Parse(Year) <= 2022) {
-            truckImgUrl = "https://latino.nascar.com/wp-content/uploads/sites/8/2022/05/19/NCWTS-Primary-RGB_240x115.png";
+        try {
+            if (Int32.Parse(Year) <= 2022) {
+                truckImgUrl = "https://latino.nascar.com/wp-content/uploads/sites/8/2022/05/19/NCWTS-Primary-RGB_240x115.png";
+            }
+        } catch (Exception e) {
+            // Do nothing
         }
     }
 }

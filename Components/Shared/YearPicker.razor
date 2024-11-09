@@ -5,18 +5,18 @@
         Season
     </div>
     <div Class="picker">
-        <button Class="pick-button" @onclick="ShowHide">@Year &#x25BC</button>
+        <button Class="pick-button" @onclick="ShowHide">@GetYear() &#x25BC</button>
         <div Class="dropdown" Style="display: @display">
-            <button @onclick="@(e => Test("2024"))">2024</button>
-            <button @onclick="@(e => Test("2023"))">2023</button>
-            <button @onclick="@(e => Test("2022"))">2022</button>
-            <button @onclick="@(e => Test("2021"))">2021</button>
-            <button @onclick="@(e => Test("2020"))">2020</button>
-            <button @onclick="@(e => Test("2019"))">2019</button>
-            <button @onclick="@(e => Test("2018"))">2018</button>
-            <button @onclick="@(e => Test("2017"))">2017</button>
-            <button @onclick="@(e => Test("2016"))">2016</button>
-            <button @onclick="@(e => Test("2015"))">2015</button>
+            <button @onclick="@(e => NavigateTo("2024"))">2024</button>
+            <button @onclick="@(e => NavigateTo("2023"))">2023</button>
+            <button @onclick="@(e => NavigateTo("2022"))">2022</button>
+            <button @onclick="@(e => NavigateTo("2021"))">2021</button>
+            <button @onclick="@(e => NavigateTo("2020"))">2020</button>
+            <button @onclick="@(e => NavigateTo("2019"))">2019</button>
+            <button @onclick="@(e => NavigateTo("2018"))">2018</button>
+            <button @onclick="@(e => NavigateTo("2017"))">2017</button>
+            <button @onclick="@(e => NavigateTo("2016"))">2016</button>
+            <button @onclick="@(e => NavigateTo("2015"))">2015</button>
         </div>
     </div>
 </div>
@@ -32,7 +32,7 @@
 
     private string display = "none";
 
-    private void Test(string year)
+    private void NavigateTo(string year)
     {
         NavManager.NavigateTo("/" + SeriesName + "/" + year);
     }
@@ -42,6 +42,15 @@
             display = "block";
         } else {
             display = "none";
+        }
+    }
+
+    private string GetYear() {
+        try {
+            Int32.Parse(Year);
+            return Year;
+        } catch (Exception e) {
+            return "0000";
         }
     }
 }
