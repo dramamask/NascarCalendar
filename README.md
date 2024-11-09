@@ -15,7 +15,7 @@ select any year between 2015 and 2024. Those were the years that are available f
 ![Application Screenshot](screenshot.png)
 
 ## Features of Note
-The NASCAR Truck Series logo displays the Camping World logo for the years 2015 to 2022. The Crafsman logo is used for the 2023 and 2024 schedule.
+The NASCAR Truck Series logo displays the Camping World logo for the years 2015 to 2022. The Crafsman logo is used for 2023 and later. Same thing goes for the series name display.
 
 The application properly resizes when the browser window width is changed.
 
@@ -38,9 +38,11 @@ Development can be done with any editor as long as the dotnet cli is present.
 
 ## TODO
 
-Create a series service that converts series name ot proper series name.
-
 Better page titles.
+
+Create component for series picks
+
+Conmvert year to int everywhere. Convert to string if needed.
 
 
 

@@ -1,30 +1,33 @@
+@using NascarCalendar.Services
+@inject ISeriesService SeriesService
+
 <div Class="container">
     <div Class="series-name">
-        @publicSeriesName
+        @GetSeriesName(SeriesIdentifier)
     </div>
-    <div Class="cup series @(SeriesName != "series_1" ? "blur-pic" : "")">
+    <div Class="cup series @(SeriesIdentifier != "series_1" ? "blur-pic" : "")">
         <a href="/series_1/@Year">
-            <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_cup_series_logo.svg"/>
+            <img src="@GetSeriesImage("series_1")"/>
         </a>
-        @if (SeriesName == "series_1")
+        @if (SeriesIdentifier == "series_1")
         {
             <div Class="line mt-1" />
         }
     </div>
-    <div Class="xfinity series @(SeriesName != "series_2" ? "blur-pic" : "")">
+    <div Class="xfinity series @(SeriesIdentifier != "series_2" ? "blur-pic" : "")">
         <a href="/series_2/@Year">
-            <img src="https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_xfinity_series_logos-1.svg"/>
+            <img src="@GetSeriesImage("series_2")"/>
         </a>
-        @if (SeriesName == "series_2")
+        @if (SeriesIdentifier == "series_2")
         {
             <div Class="line mt-1" />
         }
     </div>
-    <div Class="truck series @(SeriesName != "series_3" ? "blur-pic" : "")">
+    <div Class="truck series @(SeriesIdentifier != "series_3" ? "blur-pic" : "")">
         <a href="/series_3/@Year">
-            <img src="@truckImgUrl"/>
+            <img src="@GetSeriesImage("series_3")"/>
         </a>
-        @if (SeriesName == "series_3")
+        @if (SeriesIdentifier == "series_3")
         {
             <div Class="line mt-1" />
         }
@@ -35,39 +38,20 @@
 
 @code {
     [Parameter, EditorRequired]
-    public string SeriesName { get; set; } = "";
+    public string SeriesIdentifier { get; set; } = "";
 
     [Parameter, EditorRequired]
     public string Year { get; set; } = "";
 
-    private string publicSeriesName = "";
-    private string truckImgUrl = "https://www.nascar.com/wp-content/uploads/sites/7/2023/05/10/nascar_craftsman_truck_series_logo.svg";
-
-    protected override void OnInitialized()
+    public string GetSeriesName(string seriesIdentifier)
     {
-        // TODO: Move this code into a service class. We want to also use it for the title of the Series page
-        switch (SeriesName)
-        {
-            case "series_1":
-                publicSeriesName = "NASCAR Cup Series";
-                break;
-            case "series_2":
-                publicSeriesName = "NASCAR Xfinity Series";
-                break;
-            case "series_3":
-                publicSeriesName = "NASCAR CRAFTSMAN Truck Series";
-                break;
-            default:
-                publicSeriesName = "";
-                break;
-        }
+        Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
+        return SeriesService.GetSeriesName(seriesIdentifier, year);
+    }
 
-        try {
-            if (Int32.Parse(Year) <= 2022) {
-                truckImgUrl = "https://latino.nascar.com/wp-content/uploads/sites/8/2022/05/19/NCWTS-Primary-RGB_240x115.png";
-            }
-        } catch (Exception e) {
-            // Do nothing
-        }
+    public string GetSeriesImage(string seriesIdentifier)
+    {
+        Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
+        return SeriesService.GetSeriesImage(seriesIdentifier, year);
     }
 }
