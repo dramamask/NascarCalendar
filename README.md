@@ -44,7 +44,7 @@ Development can be done with any editor as long as the dotnet cli is present.
 `dotnet watch` starts the server and opens the web page in the browser.
 
 ## TODO
-Convert year to int everywhere. Convert to string if needed.
+change SeriesName to SeriesIdentifier in comp and page parameters.
 
 
 

@@ -21,11 +21,10 @@
     public string SeriesIdentifier { get; set; } = "";
 
     [Parameter, EditorRequired]
-    public string Year { get; set; } = "";
+    public int Year { get; set; } = 0;
 
     private string GetSeriesName(string seriesIdentifier)
     {
-        Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
-        return SeriesService.GetSeriesName(seriesIdentifier, year);
+        return SeriesService.GetSeriesName(seriesIdentifier, Year);
     }
 }

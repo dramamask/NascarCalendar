@@ -23,23 +23,21 @@
     public string SelectedSeriesId { get; set; } = "";
 
     [Parameter, EditorRequired]
-    public string SelectedYear { get; set; } = "";
+    public int SelectedYear { get; set; } = 0;
 
     private string GetSelectedYear()
     {
-        return SelectedYear;
+        return SelectedYear.ToString();
     }
 
     private string GetSeriesName(string seriesIdentifier)
     {
-        Int32.TryParse(SelectedYear, out int year); // TODO: make year an int everywhere
-        return SeriesService.GetSeriesName(seriesIdentifier, year);
+        return SeriesService.GetSeriesName(seriesIdentifier, SelectedYear);
     }
 
     private string GetSeriesImage(string seriesIdentifier)
     {
-        Int32.TryParse(SelectedYear, out int year); // TODO: make year an int everywhere
-        return SeriesService.GetSeriesImage(seriesIdentifier, year);
+        return SeriesService.GetSeriesImage(seriesIdentifier, SelectedYear);
     }
     // Returns the css class that is used to blur the image of the series that is not selected
     private string GetBlurClass()

@@ -2,8 +2,7 @@
  * This page displays the schedule for a specific series in a specific year.
  *@
 
-
-@page "/{SeriesName}/{Year}"
+@page "/{SeriesName}/{Year:int}"
 @using NascarCalendar.Services
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
@@ -48,7 +47,7 @@ else
     public string SeriesName { get; set; }
 
     [Parameter, EditorRequired]
-    public string Year { get; set; }
+    public int Year { get; set; }
 
     private string error = "";
     private List<Models.Race> races = null;
@@ -56,8 +55,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         try {
-            Int32.TryParse(Year, out int year); // TODO: convert all years to int
-            ErrorService.CheckPageURL(SeriesName, year);
+            ErrorService.CheckPageURL(SeriesName, Year);
 
             await CalendarService.GetCalendar(Year);
 
@@ -70,9 +68,9 @@ else
     private string GetPageTitle()
     {
         if (error == "") {
-            if (Int32.TryParse(Year, out int year)) {
-                return "Schedule for the " + Year + " " + SeriesService.GetSeriesName(SeriesName, year);
-            }
+            var title = "Schedule for the " + Year.ToString();
+            title += " " + SeriesService.GetSeriesName(SeriesName, Year);
+            return title;
         }
 
         return "Error";
