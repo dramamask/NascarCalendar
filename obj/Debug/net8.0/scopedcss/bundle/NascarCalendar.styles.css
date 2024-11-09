@@ -170,9 +170,6 @@ main[b-1kezf5iojd] {
     text-transform: uppercase
 }
 /* _content/NascarCalendar/Components/Shared/SeriesPicker.razor.rz.scp.css */
-.main-container[b-6myoym1tfp] {
-}
-
 .series-name[b-6myoym1tfp] {
     top: 30%;
     font-weight: 800;
@@ -211,12 +208,32 @@ main[b-1kezf5iojd] {
 }
 
 .text[b-q8w136na8j] {
+    display:flex;
+    justify-content: flex-end;
     font-weight: 800;
     font-size: 1.3em;
+    margin-top: 10px;
     text-transform: uppercase;
-    width: 10%
+    width: 10%;
 }
 
 .picker[b-q8w136na8j] {
     width: 10%;
+}
+
+.the-dropdown[b-q8w136na8j] {
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+.dropdowns button[b-q8w136na8j] {
+    background-color: #ffffff;
+    border: none;
+    font-weight: 400;
+    font-size: 1.3em;
+    width: 100%;
+}
+
+.bottom-spacer[b-q8w136na8j] {
+    height: 20px;
 }

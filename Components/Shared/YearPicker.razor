@@ -6,23 +6,25 @@
         Season
     </div>
     <div Class="picker">
-        <Dropdown>
-            <DropdownToggleButton>@Year</DropdownToggleButton>
-            <DropdownMenu>
+        <Dropdown Class="rounded-0 the-dropdown" Size="DropdownSize.Large">
+            <DropdownToggleButton Class="rounded-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Year &nbsp;&nbsp;&nbsp;&nbsp;</DropdownToggleButton>
+            <DropdownMenu Class="rounded-0 dropdowns">
                 <button @onclick="@(e => Test("2024"))">2024</button>
                 <button @onclick="@(e => Test("2023"))">2023</button>
-                <button @onclick="@(e => Test("2023"))">2022</button>
-                <button @onclick="@(e => Test("2023"))">2021</button>
-                <button @onclick="@(e => Test("2023"))">2020</button>
-                <button @onclick="@(e => Test("2023"))">2019</button>
-                <button @onclick="@(e => Test("2023"))">2018</button>
-                <button @onclick="@(e => Test("2023"))">2017</button>
-                <button @onclick="@(e => Test("2023"))">2016</button>
-                <button @onclick="@(e => Test("2023"))">2015</button>
+                <button @onclick="@(e => Test("2022"))">2022</button>
+                <button @onclick="@(e => Test("2021"))">2021</button>
+                <button @onclick="@(e => Test("2020"))">2020</button>
+                <button @onclick="@(e => Test("2019"))">2019</button>
+                <button @onclick="@(e => Test("2018"))">2018</button>
+                <button @onclick="@(e => Test("2017"))">2017</button>
+                <button @onclick="@(e => Test("2016"))">2016</button>
+                <button @onclick="@(e => Test("2015"))">2015</button>
             </DropdownMenu>
         </Dropdown>
     </div>
 </CardGroup>
+
+<div Class="bottom-spacer" />
 
 @code {
     [Parameter, EditorRequired]
