@@ -21,7 +21,10 @@
 
 @if (races == null)
 {
-    <p></p>
+    @if (error == "")
+    {
+        <MySpinner />
+    }
 }
 else
 {

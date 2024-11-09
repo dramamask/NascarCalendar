@@ -116,6 +116,11 @@ main[b-1kezf5iojd] {
     font-family: monospace;
     margin-top: 20px;
 }
+/* _content/NascarCalendar/Components/Shared/MySpinner.razor.rz.scp.css */
+.spinner-container[b-rvxpdk0248] {
+    display: flex;
+    justify-content: center;
+}
 /* _content/NascarCalendar/Components/Shared/Race.razor.rz.scp.css */
 .main-container[b-oh86wjfrd3] {
     width:100%;

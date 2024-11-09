@@ -44,3 +44,4 @@
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/ErrorMessage.razor.rz.scp.css
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/YearPicker.razor.rz.scp.css
 /home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Pages/404.razor.rz.scp.css
+/home/mark/dev/NascarCalendar/obj/Debug/net8.0/scopedcss/Components/Shared/MySpinner.razor.rz.scp.css
