@@ -1,0 +1,49 @@
+@*
+ * This component displays a single series inside the SeriesPicker component.
+ *@
+
+@using NascarCalendar.Services
+@inject ISeriesService SeriesService
+
+<div Class="cup series @GetBlurClass()">
+    <a href="/@ThisSeriesId/@GetSelectedYear()">
+        <img src="@GetSeriesImage(@ThisSeriesId)"/>
+    </a>
+    @if (SelectedSeriesId == @ThisSeriesId)
+    {
+        <div Class="line mt-1" />
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string ThisSeriesId { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public string SelectedSeriesId { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public string SelectedYear { get; set; } = "";
+
+    private string GetSelectedYear()
+    {
+        return SelectedYear;
+    }
+
+    private string GetSeriesName(string seriesIdentifier)
+    {
+        Int32.TryParse(SelectedYear, out int year); // TODO: make year an int everywhere
+        return SeriesService.GetSeriesName(seriesIdentifier, year);
+    }
+
+    private string GetSeriesImage(string seriesIdentifier)
+    {
+        Int32.TryParse(SelectedYear, out int year); // TODO: make year an int everywhere
+        return SeriesService.GetSeriesImage(seriesIdentifier, year);
+    }
+    // Returns the css class that is used to blur the image of the series that is not selected
+    private string GetBlurClass()
+    {
+        return (SelectedSeriesId != ThisSeriesId) ? "blur-pic" : "";
+    }
+}

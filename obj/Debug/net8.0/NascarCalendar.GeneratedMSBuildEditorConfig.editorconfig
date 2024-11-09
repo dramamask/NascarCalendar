@@ -58,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope = b-rvxpdk0248
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvUmFjZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-oh86wjfrd3
 
+[/home/mark/dev/NascarCalendar/Components/Shared/SeriesPick.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvU2VyaWVzUGljay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1bpocjulfr
+
 [/home/mark/dev/NascarCalendar/Components/Shared/SeriesPicker.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvU2VyaWVzUGlja2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-6myoym1tfp

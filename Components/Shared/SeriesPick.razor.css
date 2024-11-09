@@ -1,0 +1,24 @@
+.blur-pic {
+    opacity: 0.2;
+}
+
+.blur-pic:hover {
+    opacity: 1;
+}
+
+.series {
+    padding-left: 10px;
+}
+
+.series a img {
+    object-fit: contain;
+    width: 140px;
+}
+
+.line {
+    border: none;
+    height: 5px;
+    color: #3a81fc;
+    background-color: #3a81fc;
+    margin-bottom: 15px;
+}

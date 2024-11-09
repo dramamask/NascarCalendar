@@ -9,33 +9,9 @@
     <div Class="series-name">
         @GetSeriesName(SeriesIdentifier)
     </div>
-    <div Class="cup series @(SeriesIdentifier != "series_1" ? "blur-pic" : "")">
-        <a href="/series_1/@Year">
-            <img src="@GetSeriesImage("series_1")"/>
-        </a>
-        @if (SeriesIdentifier == "series_1")
-        {
-            <div Class="line mt-1" />
-        }
-    </div>
-    <div Class="xfinity series @(SeriesIdentifier != "series_2" ? "blur-pic" : "")">
-        <a href="/series_2/@Year">
-            <img src="@GetSeriesImage("series_2")"/>
-        </a>
-        @if (SeriesIdentifier == "series_2")
-        {
-            <div Class="line mt-1" />
-        }
-    </div>
-    <div Class="truck series @(SeriesIdentifier != "series_3" ? "blur-pic" : "")">
-        <a href="/series_3/@Year">
-            <img src="@GetSeriesImage("series_3")"/>
-        </a>
-        @if (SeriesIdentifier == "series_3")
-        {
-            <div Class="line mt-1" />
-        }
-    </div>
+    <SeriesPick  ThisSeriesId="series_1" SelectedSeriesId="@SeriesIdentifier" SelectedYear="@Year"/>
+    <SeriesPick  ThisSeriesId="series_2" SelectedSeriesId="@SeriesIdentifier" SelectedYear="@Year"/>
+    <SeriesPick  ThisSeriesId="series_3" SelectedSeriesId="@SeriesIdentifier" SelectedYear="@Year"/>
 </div>
 
 <div Class="line"/>
@@ -51,11 +27,5 @@
     {
         Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
         return SeriesService.GetSeriesName(seriesIdentifier, year);
-    }
-
-    private string GetSeriesImage(string seriesIdentifier)
-    {
-        Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
-        return SeriesService.GetSeriesImage(seriesIdentifier, year);
     }
 }

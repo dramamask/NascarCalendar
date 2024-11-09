@@ -25,6 +25,11 @@ Custom 404 page.
 
 The browser tab title updates when the application content changes.
 
+## Helpful Online Tools
+I used the [JSON 2 C#](https://json2csharp.com/) website to convert the JSON to a C# model class.
+
+I used the [JSON formatter](https://jsonformatter.org/json-parser) website to help me browse the JSON more easily.
+
 ## Running the Project from the Command Line
 This project can be run with the dotnet cli.
 
@@ -39,8 +44,6 @@ Development can be done with any editor as long as the dotnet cli is present.
 `dotnet watch` starts the server and opens the web page in the browser.
 
 ## TODO
-Create component for series picks
-
 Convert year to int everywhere. Convert to string if needed.
 
 

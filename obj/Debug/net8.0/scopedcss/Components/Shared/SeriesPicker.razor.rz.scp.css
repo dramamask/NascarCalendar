@@ -14,23 +14,6 @@
     width: 70%;
 }
 
-.blur-pic[b-6myoym1tfp] {
-    opacity: 0.2;
-}
-
-.blur-pic:hover[b-6myoym1tfp] {
-    opacity: 1;
-}
-
-.series[b-6myoym1tfp] {
-    padding-left: 10px;
-}
-
-.series a img[b-6myoym1tfp] {
-    object-fit: contain;
-    width: 140px;
-}
-
 .line[b-6myoym1tfp] {
     border: none;
     height: 5px;

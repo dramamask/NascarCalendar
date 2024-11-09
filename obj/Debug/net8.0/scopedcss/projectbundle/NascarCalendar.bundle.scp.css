@@ -186,6 +186,31 @@ main[b-1kezf5iojd] {
     margin-bottom: 0;
     text-transform: uppercase
 }
+/* _content/NascarCalendar/Components/Shared/SeriesPick.razor.rz.scp.css */
+.blur-pic[b-1bpocjulfr] {
+    opacity: 0.2;
+}
+
+.blur-pic:hover[b-1bpocjulfr] {
+    opacity: 1;
+}
+
+.series[b-1bpocjulfr] {
+    padding-left: 10px;
+}
+
+.series a img[b-1bpocjulfr] {
+    object-fit: contain;
+    width: 140px;
+}
+
+.line[b-1bpocjulfr] {
+    border: none;
+    height: 5px;
+    color: #3a81fc;
+    background-color: #3a81fc;
+    margin-bottom: 15px;
+}
 /* _content/NascarCalendar/Components/Shared/SeriesPicker.razor.rz.scp.css */
 .container[b-6myoym1tfp] {
     display: flex;
@@ -201,23 +226,6 @@ main[b-1kezf5iojd] {
     font-weight: 800;
     font-size: 1.1em;
     width: 70%;
-}
-
-.blur-pic[b-6myoym1tfp] {
-    opacity: 0.2;
-}
-
-.blur-pic:hover[b-6myoym1tfp] {
-    opacity: 1;
-}
-
-.series[b-6myoym1tfp] {
-    padding-left: 10px;
-}
-
-.series a img[b-6myoym1tfp] {
-    object-fit: contain;
-    width: 140px;
 }
 
 .line[b-6myoym1tfp] {
