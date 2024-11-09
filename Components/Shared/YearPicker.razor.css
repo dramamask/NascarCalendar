@@ -1,5 +1,10 @@
-.spacer {
-    width: 80%;
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 .season-text {
@@ -8,13 +13,8 @@
     font-weight: 800;
     font-size: 1.3em;
     padding-top: 3px;
-    padding-right: 5px;
+    padding-right: 15px;
     text-transform: uppercase;
-    width: 10%;
-}
-
-.picker {
-    width: 10%;
 }
 
 .pick-button {
@@ -26,6 +26,7 @@
 
 .dropdown {
     border: 1px solid #000000;
+    margin-top: 34px;
     position: absolute;
     z-index: 1000;
 }

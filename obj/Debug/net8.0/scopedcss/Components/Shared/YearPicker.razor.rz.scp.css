@@ -1,5 +1,10 @@
-.spacer[b-q8w136na8j] {
-    width: 80%;
+.container[b-q8w136na8j] {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 .season-text[b-q8w136na8j] {
@@ -8,13 +13,8 @@
     font-weight: 800;
     font-size: 1.3em;
     padding-top: 3px;
-    padding-right: 5px;
+    padding-right: 15px;
     text-transform: uppercase;
-    width: 10%;
-}
-
-.picker[b-q8w136na8j] {
-    width: 10%;
 }
 
 .pick-button[b-q8w136na8j] {
@@ -26,6 +26,7 @@
 
 .dropdown[b-q8w136na8j] {
     border: 1px solid #000000;
+    margin-top: 34px;
     position: absolute;
     z-index: 1000;
 }
