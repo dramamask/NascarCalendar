@@ -3,10 +3,11 @@
 @using Models = NascarCalendar.Models
 @using NascarCalendar.Components.Shared
 @inject ICalendarService CalendarService
+@inject ISeriesService SeriesService
 @attribute [StreamRendering]
 @rendermode InteractiveServer
 
-<PageTitle>Series</PageTitle>
+<PageTitle>@GetPageTitle()</PageTitle>
 
 <h1>NASCAR Schedule @Year</h1>
 
@@ -103,5 +104,16 @@ else
         error += " and {Year} is a 4-digit number between 2015 and 2024.";
 
         return error;
+    }
+
+    private string GetPageTitle()
+    {
+        if (error == "") {
+            if (Int32.TryParse(Year, out int year)) {
+                return "Schedule for the " + Year + " " + SeriesService.GetSeriesName(SeriesName, year);
+            }
+        }
+
+        return "Error";
     }
 }

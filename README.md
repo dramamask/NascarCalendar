@@ -17,11 +17,13 @@ select any year between 2015 and 2024. Those were the years that are available f
 ## Features of Note
 The NASCAR Truck Series logo displays the Camping World logo for the years 2015 to 2022. The Crafsman logo is used for 2023 and later. Same thing goes for the series name display.
 
-The application properly resizes when the browser window width is changed.
+The application properly resizes when the browser window width is changed (responsive design).
 
 An error messages is displayed if the json cannot be fetched, or properly parsed, for whatever reason. An error message is also displayed if someone manually enters an incorrect URL path.
 
 Custom 404 page.
+
+The browser tab title updates when the application content changes.
 
 ## Running the Project from the Command Line
 This project can be run with the dotnet cli.
@@ -37,12 +39,11 @@ Development can be done with any editor as long as the dotnet cli is present.
 `dotnet watch` starts the server and opens the web page in the browser.
 
 ## TODO
-
-Better page titles.
+Create service class for url checking and related error messages
 
 Create component for series picks
 
-Conmvert year to int everywhere. Convert to string if needed.
+Convert year to int everywhere. Convert to string if needed.
 
 
 
