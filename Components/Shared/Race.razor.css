@@ -1,47 +1,66 @@
+.main-container {
+    width:100%;
+}
+
+.date-box {
+    width: 15%;
+}
+
+.race-name-box {
+    width: 25%;
+}
+
+.race-distance-box {
+    padding-left: 20px;
+    margin-top: 5px;
+    width: 60%;
+}
+
 .race-name {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 0;
+
 }
 
 .track-name {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 0.9em;
+    font-weight: 800;
+    margin-bottom: 0;
     text-transform: uppercase
 }
 
 .weekday {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 0;
     text-transform: uppercase
 }
 
 .date {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 0;
     text-transform: uppercase
 }
 
 .time {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 0;
     text-transform: uppercase
 }
 
 .laps {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 0.7em;
+    font-weight: 800;
+    margin-bottom: 0;
     text-transform: uppercase
 }
 
 .distance {
-    margin-bottom: 0;
-    font-weight: 800;
     font-size: 0.7em;
+    font-weight: 800;
+    margin-bottom: 0;
     text-transform: uppercase
 }

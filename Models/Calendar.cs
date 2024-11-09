@@ -48,7 +48,6 @@ namespace NascarCalendar.Models;
         public double average_speed { get; set; }
         public string total_race_time { get; set; }
         public string margin_of_victory { get; set; }
-        public int race_purse { get; set; }
         public string race_comments { get; set; }
         public int attendance { get; set; }
         public List<object> infractions { get; set; }
@@ -63,9 +62,14 @@ namespace NascarCalendar.Models;
         public int qualifying_race_no { get; set; }
         public int qualifying_race_id { get; set; }
         public bool has_qualifying { get; set; }
-
-        // TODO: Make this work with null values. JsonIgnoreCondition configuration doesn't seem to work.
-        //public int winner_driver_id { get; set; }
         public object pole_winner_laptime { get; set; }
+
+        // TODO: These null in certain years. This crashes the JSON parser.
+        //       JsonIgnoreCondition configuration doesn't seem to work.
+        //       Figure out how to handle this.
+        //
+        // public int winner_driver_id { get; set; }
+        // public int race_purse { get; set; }
+
     }
 

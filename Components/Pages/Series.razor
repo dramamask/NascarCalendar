@@ -10,7 +10,9 @@
 
 <h1>NASCAR Schedule @Year</h1>
 
-<SeriesPicker SeriesName=@SeriesName Year="@Year"/>
+<SeriesPicker SeriesName=@SeriesName Year=@Year/>
+
+<YearPicker SeriesName=@SeriesName Year=@Year/>
 
 @if (error != "")
 {
@@ -42,6 +44,8 @@ else
     private string error = "";
     private List<Models.Race> races = null;
 
+    //TODO: error handling for incorrect url parameters
+
     protected override async Task OnInitializedAsync()
     {
         try {
@@ -49,7 +53,7 @@ else
 
             races = CalendarService.GetSeries(SeriesName);
         } catch (Exception e) {
-            var error = e.Message;
+            error = e.Message;
         }
     }
 }

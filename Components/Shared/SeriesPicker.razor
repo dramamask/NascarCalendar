@@ -1,5 +1,5 @@
 <CardGroup Class="mb-2 border-0 main-container">
-    <div Class="series-name" Style="width:70%;">
+    <div Class="series-name">
         @publicSeriesName
     </div>
     <div Class="cup series @(SeriesName != "series_1" ? "blur-pic" : "")">
@@ -45,6 +45,7 @@
 
     protected override void OnInitialized()
     {
+        // TODO: Move this code into a service class. We want to also use it for the title of the Series page
         switch (SeriesName)
         {
             case "series_1":

@@ -22,7 +22,8 @@
 }
 
 .series a img[b-6myoym1tfp] {
-
+    object-fit: contain;
+    width: 100%;
 }
 
 .line[b-6myoym1tfp] {

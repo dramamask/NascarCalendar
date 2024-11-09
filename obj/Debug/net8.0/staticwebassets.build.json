@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cbBHMg6Pt9oyUwiW9R7Wh8qTRo5u3NQQH9pq9a5RLY8=",
+  "Hash": "Bh1HQazMFOzz5wfIpQ2f2+/R3cQnu6REpkwd2Hx4fvY=",
   "Source": "NascarCalendar",
   "BasePath": "_content/NascarCalendar",
   "Mode": "Default",
@@ -264,12 +264,12 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/home/mark/dev/NascarCalendar/wwwroot/favicon.png",
+      "Identity": "/home/mark/dev/NascarCalendar/wwwroot/favicon.webp",
       "SourceId": "NascarCalendar",
       "SourceType": "Discovered",
       "ContentRoot": "/home/mark/dev/NascarCalendar/wwwroot/",
       "BasePath": "_content/NascarCalendar",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -280,7 +280,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.webp"
     }
   ]
 }

@@ -1,0 +1,14 @@
+.spacer {
+    width: 80%;
+}
+
+.text {
+    font-weight: 800;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    width: 10%
+}
+
+.picker {
+    width: 10%;
+}

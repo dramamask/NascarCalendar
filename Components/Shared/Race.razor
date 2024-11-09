@@ -1,26 +1,20 @@
 @using NascarCalendar.Services
 @inject ICalendarService CalendarService
 
-<Card Class="mb-2 rounded-0 shadow-sm" Style="width:100%;">
+<Card Class="mb-2 rounded-0 shadow-sm main-container">
     <CardGroup Class="p-2">
-        <div Style="width:10%">
+        <div Class="date-box">
             <p Class="weekday">@raceDayOfWeek</p>
             <p Class="date">@raceDate</p>
             <p Class="time">@raceTime ET</p>
         </div>
-        <div Style="width:25%"
+        <div Class="race-name-box">
             <p Class="race-name">@raceName</p>
             <p Class="track-name">@trackName</p>
         </div>
-        <div Style="width:30%">
-
-        </div>
-        <div Style="width:25%">
+        <div Class="race-distance-box">
             <p Class="laps">This is a @laps lap race</p>
             <p Class="distance">With a total distance of @distance miles</p>
-        </div>
-        <div Style="width:10%">
-
         </div>
     </CardGroup>
 </Card>

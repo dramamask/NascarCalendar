@@ -9,8 +9,8 @@
       "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "/home/mark/dev/NascarCalendar/wwwroot/favicon.png",
-      "PackagePath": "staticwebassets/favicon.png"
+      "Id": "/home/mark/dev/NascarCalendar/wwwroot/favicon.webp",
+      "PackagePath": "staticwebassets/favicon.webp"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.NascarCalendar.Microsoft.AspNetCore.StaticWebAssets.props",

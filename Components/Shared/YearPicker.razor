@@ -1,0 +1,45 @@
+@inject NavigationManager NavManager
+
+<CardGroup Class="border-0">
+    <div Class="spacer"></div>
+    <div Class="text">
+        Season
+    </div>
+    <div Class="picker">
+        <Dropdown>
+            <DropdownToggleButton>@Year</DropdownToggleButton>
+            <DropdownMenu>
+                <button @onclick="@(e => Test("2024"))">2024</button>
+                <button @onclick="@(e => Test("2023"))">2023</button>
+                <button @onclick="@(e => Test("2023"))">2022</button>
+                <button @onclick="@(e => Test("2023"))">2021</button>
+                <button @onclick="@(e => Test("2023"))">2020</button>
+                <button @onclick="@(e => Test("2023"))">2019</button>
+                <button @onclick="@(e => Test("2023"))">2018</button>
+                <button @onclick="@(e => Test("2023"))">2017</button>
+                <button @onclick="@(e => Test("2023"))">2016</button>
+                <button @onclick="@(e => Test("2023"))">2015</button>
+            </DropdownMenu>
+        </Dropdown>
+    </div>
+</CardGroup>
+
+@code {
+    [Parameter, EditorRequired]
+    public string SeriesName { get; set; }
+
+    [Parameter, EditorRequired]
+    public string Year { get; set; }
+
+    private string uri = "";
+
+    protected override void OnInitialized()
+    {
+        uri = "/" + SeriesName + "/" + Year;
+    }
+
+    private void Test(string year)
+    {
+        NavManager.NavigateTo("/" + SeriesName + "/" + year);
+    }
+}
