@@ -21,6 +21,8 @@ The application properly resizes when the browser window width is changed.
 
 An error messages is displayed if the json cannot be fetched, or properly parsed, for whatever reason. An error message is also displayed if someone manually enters an incorrect URL path.
 
+Custom 404 page.
+
 ## Running the Project from the Command Line
 This project can be run with the dotnet cli.
 
@@ -35,8 +37,6 @@ Development can be done with any editor as long as the dotnet cli is present.
 `dotnet watch` starts the server and opens the web page in the browser.
 
 ## TODO
-Get 404 page to work.
-
 Spinner.
 
 Create a series service that converts series name ot proper series name.
