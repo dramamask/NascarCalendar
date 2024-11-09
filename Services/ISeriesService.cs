@@ -1,5 +1,3 @@
-using NascarCalendar.Models;
-
 namespace NascarCalendar.Services;
 
 public interface ISeriesService

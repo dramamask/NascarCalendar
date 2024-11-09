@@ -43,13 +43,13 @@
     [Parameter, EditorRequired]
     public string Year { get; set; } = "";
 
-    public string GetSeriesName(string seriesIdentifier)
+    private string GetSeriesName(string seriesIdentifier)
     {
         Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
         return SeriesService.GetSeriesName(seriesIdentifier, year);
     }
 
-    public string GetSeriesImage(string seriesIdentifier)
+    private string GetSeriesImage(string seriesIdentifier)
     {
         Int32.TryParse(Year, out int year); // TODO: make year an int everywhere
         return SeriesService.GetSeriesImage(seriesIdentifier, year);

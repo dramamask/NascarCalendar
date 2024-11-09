@@ -1,7 +1,3 @@
-using NascarCalendar.Models;
-using System.Net;
-using System.Net.Http.Json;
-
 namespace NascarCalendar.Services;
 
 public class SeriesService() : ISeriesService
