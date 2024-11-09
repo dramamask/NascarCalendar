@@ -11,6 +11,7 @@ builder.Services.AddBlazorBootstrap();
 // Add my services
 builder.Services.AddSingleton<ICalendarService, CalendarService>();
 builder.Services.AddSingleton<ISeriesService, SeriesService>();
+builder.Services.AddSingleton<IErrorService, ErrorService>();
 builder.Services.AddHttpClient<CalendarService>();
 
 // Add services to the container.

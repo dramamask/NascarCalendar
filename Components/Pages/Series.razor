@@ -4,6 +4,7 @@
 @using NascarCalendar.Components.Shared
 @inject ICalendarService CalendarService
 @inject ISeriesService SeriesService
+@inject IErrorService ErrorService
 @attribute [StreamRendering]
 @rendermode InteractiveServer
 
@@ -50,7 +51,8 @@ else
     protected override async Task OnInitializedAsync()
     {
         try {
-            CheckURL();
+            Int32.TryParse(Year, out int year); // TODO: convert all years to int
+            ErrorService.CheckPageURL(SeriesName, year);
 
             await CalendarService.GetCalendar(Year);
 
@@ -58,52 +60,6 @@ else
         } catch (Exception e) {
             error = e.Message;
         }
-    }
-
-    private void CheckURL()
-    {
-        CheckURLSeriesName();
-        CheckURLYear();
-    }
-
-    private void CheckURLSeriesName()
-    {
-        var msg = "Invalid series identifier used in the URL. ";
-
-        if (SeriesName != "series_1" && SeriesName != "series_2" && SeriesName != "series_3")
-        {
-            throw new Exception(msg + GetURLErrorMessage());
-        }
-
-        return;
-    }
-
-    private void CheckURLYear()
-    {
-        int year;
-        var msg = "Invalid year used in the URL. ";
-
-        try {
-            year = Int32.Parse(Year);
-        } catch (Exception e) {
-            throw new Exception(msg + GetURLErrorMessage());
-        }
-
-        if (year < 2015 || year > 2024)
-        {
-            throw new Exception(msg + GetURLErrorMessage());
-        }
-
-        return;
-    }
-
-    private string GetURLErrorMessage()
-    {
-        var error = "The proper URL format is `/{SeriesName}/{Year}`,";
-        error += " where {SeriesName} is 'series_1', 'series_2', or 'series_3',";
-        error += " and {Year} is a 4-digit number between 2015 and 2024.";
-
-        return error;
     }
 
     private string GetPageTitle()
