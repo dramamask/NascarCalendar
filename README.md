@@ -14,7 +14,7 @@ select any year between 2015 and 2024. Those were the years that are available i
 ![Application Screenshot](screenshot.png)
 
 ## Features of Note
-I want to point out some of the extra features that I enjoyed adding:
+I want to point out some of the features that I enjoyed adding:
 - The NASCAR Truck Series logo displays the Camping World logo for the years 2015 to 2022. The Crafsman logo is used for 2023 and later. Same thing goes for the series name display.
 - The application properly resizes when the browser window width is changed (responsive design).
 - An error messages is displayed if the json cannot be fetched, or properly parsed, for whatever reason. An error message is also displayed if someone manually enters an incorrect URL path.
