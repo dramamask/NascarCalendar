@@ -29,7 +29,7 @@
 
 @code {
     [Parameter, EditorRequired]
-    public string SeriesIdentifier { get; set; }
+    public string SeriesIdentifier { get; set; } = default!;
 
     [Parameter, EditorRequired]
     public int Year { get; set; }

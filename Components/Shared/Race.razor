@@ -25,7 +25,7 @@
 
 @code {
     [Parameter, EditorRequired]
-    public string SeriesIdentifier { get; set; } = "";
+    public string SeriesIdentifier { get; set; } = default!;
 
     [Parameter, EditorRequired]
     public int RaceIndex { get; set; } = 0;
@@ -43,16 +43,14 @@
     {
         var race = CalendarService.GetRace(SeriesIdentifier, RaceIndex);
 
-        raceName = race.race_name;
-        trackName = race.track_name;
-        laps = race.scheduled_laps;
-        distance = race.scheduled_distance;
+        raceName = race.race_name ?? "";
+        trackName = race?.track_name ?? "";
+        laps = race?.scheduled_laps ?? 0;
+        distance = race?.scheduled_distance ?? 0;
 
-        raceDayOfWeek = race.race_date.DayOfWeek.ToString();
-        raceDate = race.race_date.ToString("MMM. d");
-        raceTime = race.race_date.ToString("h:mm tt");
+        raceDayOfWeek = race?.race_date.DayOfWeek.ToString() ?? "";
+        raceDate = race?.race_date.ToString("MMM. d") ?? "";
+        raceTime = race?.race_date.ToString("h:mm tt") ?? "";
         return;
     }
-
-
 }

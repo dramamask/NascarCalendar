@@ -44,13 +44,13 @@ else
 
 @code {
     [Parameter, EditorRequired]
-    public string SeriesIdentifier { get; set; }
+    public string SeriesIdentifier { get; set; } = default!;
 
     [Parameter, EditorRequired]
     public int Year { get; set; }
 
     private string error = "";
-    private List<Models.Race> races = null;
+    private List<Models.Race> races = [];
 
     protected override async Task OnInitializedAsync()
     {

@@ -1,5 +1,11 @@
 namespace NascarCalendar.Services;
 
+/**
+ * Series Service
+ * This service class contains methods to get the name and image URL of a series.
+ *
+ * @package NascarCalendar
+ */
 public class SeriesService() : ISeriesService
 {
     /**
