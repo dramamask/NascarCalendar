@@ -44,10 +44,6 @@ Development can be done with any editor as long as the dotnet cli is present.
 `dotnet watch` starts the server and opens the web page in the browser.
 
 ## TODO
-Fix all the warnings
-
-Check if the questiomark mullable thing works withwiner_driver_id en 2024
-
 Check to make sure all functions are commented
 
 Create a docker container to run the application
