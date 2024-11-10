@@ -1,0 +1,8 @@
+services:
+  nascarcalendar:
+    image: dramamask/nascarcalendar:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
