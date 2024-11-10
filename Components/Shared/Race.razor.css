@@ -3,17 +3,18 @@
 }
 
 .date-box {
-    width: 15%;
+    width: 13%;
 }
 
 .race-name-box {
-    width: 25%;
+    padding-left: 20px;
+    width: 55%;
 }
 
 .race-distance-box {
     padding-left: 20px;
     margin-top: 5px;
-    width: 60%;
+    width: 30%;
 }
 
 .race-name {

@@ -125,17 +125,18 @@ main[b-1kezf5iojd] {
 }
 
 .date-box[b-oh86wjfrd3] {
-    width: 15%;
+    width: 13%;
 }
 
 .race-name-box[b-oh86wjfrd3] {
-    width: 25%;
+    padding-left: 20px;
+    width: 55%;
 }
 
 .race-distance-box[b-oh86wjfrd3] {
     padding-left: 20px;
     margin-top: 5px;
-    width: 60%;
+    width: 30%;
 }
 
 .race-name[b-oh86wjfrd3] {

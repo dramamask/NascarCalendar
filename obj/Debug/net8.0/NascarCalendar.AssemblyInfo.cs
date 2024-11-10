@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NascarCalendar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b8ae3f37e0b5cdb20ae99a8d940b265c4a62743")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcb6c78e7a24f02a74b3223f389bb5dbf69e6185")]
 [assembly: System.Reflection.AssemblyProductAttribute("NascarCalendar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NascarCalendar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
